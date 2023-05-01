@@ -2,3 +2,8 @@
 /* @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic) */
 /* or */
 /* @include font-face("Samplina Neue", "../fonts/SamplinaNeue"); */
+@include font-face('Roboto', '/assets/fonts/Roboto/Roboto-Regular', 400, null, woff2 woff);
+
+@include font-face('Roboto', '/assets/fonts/Roboto/Roboto-Medium', 500, null, woff2 woff);
+
+@include font-face('Roboto', '/assets/fonts/Roboto/Roboto-Bold', 700, null, woff2 woff);
