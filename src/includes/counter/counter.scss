@@ -5,10 +5,35 @@
 
 	&__increase,
 	&__decrease {
+		position: relative;
 		width: 20px;
 		height: 20px;
 		border: 1px solid $c-black;
 		border-radius: 50%;
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 12px;
+			height: 1px;
+			background-color: $c-black;
+			transform: translate(-50%, -50%);
+			content: '';
+		}
+	}
+
+	&__increase {
+		&::after {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 1px;
+			height: 12px;
+			background-color: $c-black;
+			transform: translate(-50%, -50%);
+			content: '';
+		}
 	}
 
 	&__count {

@@ -5,6 +5,8 @@
 
 		<div class="main__container container">
 				<section></section>
-				{% include '../includes/section-cart/section-cart.nunj' %}
+				<aside class="main__cart">
+						{% include '../includes/section-cart/section-cart.nunj' %}
+				</aside>
 		</div>
 {% endblock %}

@@ -3,4 +3,9 @@
 		display: flex;
 		justify-content: space-between;
 	}
+
+	&__cart {
+		position: relative;
+		right: -30px;
+	}
 }

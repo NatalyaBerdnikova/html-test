@@ -1,8 +1,8 @@
 .section-cart {
-	flex-grow: 1;
-	max-width: 380px;
-	padding: 40px 14px 0 40px;
+	max-width: 410px;
+	padding: 40px;
 	border-left: 1px solid $c-light-gray;
+	border-bottom: 1px solid $c-light-gray;
 
 	&__title {
 		font-weight: 700;
