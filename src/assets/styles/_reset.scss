@@ -106,7 +106,13 @@ a[href^='tel'] {
 	text-decoration: none;
 }
 
+a {
+	text-decoration: none;
+}
+
 button {
 	user-select: none;
 	border-radius: 0;
+	border: unset;
+	background-color: unset;
 }

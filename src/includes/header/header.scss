@@ -1,4 +1,41 @@
 .header {
-	padding: 20px 0;
-	background: #ccc;
+	padding: 26px 0 18px;
+	border-bottom: 1px solid $c-light-gray;
+
+	.container {
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		display: inline-block;
+		margin-right: auto;
+	}
+
+	&__logo-icon {
+		width: 89px;
+		height: 32px;
+	}
+
+	&__search {
+		display: inline-block;
+		margin: 0 26px 0 auto;
+	}
+
+	&__search-icon {
+		width: 24px;
+		height: 24px;
+	}
+
+	&__cart {
+		display: flex;
+		justify-content: flex-start;
+		width: 30px;
+		height: 27px;
+	}
+
+	&__cart-icon {
+		width: 24px;
+		height: 21px;
+	}
 }
