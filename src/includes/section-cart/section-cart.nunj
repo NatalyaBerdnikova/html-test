@@ -1,0 +1,33 @@
+{% from "../../components/product-card/product-card.nunj" import productCard %}
+
+{% set items = [
+  {
+    image: {
+      src: '/assets/images/card-image-1.png',
+      alt: ''
+    },
+    title: 'Amet minim mollit non deserunt ullamco est sit',
+    price: '$ 525'
+  },
+  {
+    image: {
+      src: '/assets/images/card-image-2.png',
+      alt: ''
+    },
+    title: 'Amet minim mollit non',
+    price: '$ 525'
+  }
+] %}
+
+<section class="section-cart">
+  <h4 class="section-cart__title">My basket</h4>
+  <div class="section-cart__items">
+    {% for item in items %}
+      {{ productCard({
+        image: item.image,
+        title: item.title,
+        price: item.price
+      }) }}
+    {% endfor %}
+  </div>
+</section>

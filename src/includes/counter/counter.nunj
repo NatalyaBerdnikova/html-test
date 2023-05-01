@@ -1,0 +1,7 @@
+{% from "../../components/icon/icon.nunj" import icon %}
+
+<div class="counter">
+  <button class="counter__decrease" data-counter-decrease="data-counter-decrease"></button>
+  <span class="counter__count" data-counter-count="data-counter-count">1</span>
+  <button class="counter__increase" data-counter-increase="data-counter-increase"></button>
+</div>

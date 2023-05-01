@@ -1,8 +1,10 @@
 {% extends "../templates/base.nunj" %}
 
 {% block content %}
-
 		{% include '../includes/header/header.nunj' %}
 
-		<div class="container"></div>
+		<div class="main__container container">
+				<section></section>
+				{% include '../includes/section-cart/section-cart.nunj' %}
+		</div>
 {% endblock %}
