@@ -1,0 +1,3 @@
+{% macro textInput(props) %}
+  <input class="text-input {% if props.className %} {{ props.className }}{% endif %}" type="text" placeholder="{{ props.placeholder }}" {% if props.attr %} {{ props.attr }} {% endif %}>
+{% endmacro %}

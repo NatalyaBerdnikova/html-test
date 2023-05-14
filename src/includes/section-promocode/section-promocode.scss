@@ -1,0 +1,17 @@
+.section-promocode {
+	max-width: 410px;
+	padding: 40px;
+
+	&__title {
+		margin-bottom: 30px;
+	}
+
+	&__input-wrapper {
+		display: flex;
+	}
+
+	&__input {
+		flex-grow: 1;
+		margin-right: 10px;
+	}
+}

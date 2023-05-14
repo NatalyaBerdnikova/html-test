@@ -8,13 +8,17 @@
 // @import 'controls';
 
 // ======= COMPONENTS =======
+@import '../../components/title/title';
+@import '../../components/divider/divider';
 @import '../../components/button/button';
 @import '../../components/product-card/product-card';
+@import '../../components/text-input/text-input';
 
 // ======= INCLUDES =======
 @import '../../includes/header/header';
 @import '../../includes/section-cart/section-cart';
 @import '../../includes/counter/counter';
+@import '../../includes/section-promocode/section-promocode';
 
 // ======= PAGES =======
 @import 'pages/main';

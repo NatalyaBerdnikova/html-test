@@ -7,6 +7,9 @@
 				<section></section>
 				<aside class="main__cart">
 						{% include '../includes/section-cart/section-cart.nunj' %}
+						<div class="divider"></div>
+						{% include '../includes/section-promocode/section-promocode.nunj' %}
+						<div class="divider"></div>
 				</aside>
 		</div>
 {% endblock %}
