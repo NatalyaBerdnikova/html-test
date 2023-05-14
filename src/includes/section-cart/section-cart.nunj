@@ -16,11 +16,11 @@
     },
     title: 'Amet minim mollit non',
     price: '$ 525'
-  }
-] %}
+  }]
+%}
 
 <section class="section-cart">
-  <h4 class="section-cart__title">My basket</h4>
+  <h4 class="section-cart__title title">My basket</h4>
   <div class="section-cart__items">
     {% for item in items %}
       {{ productCard({

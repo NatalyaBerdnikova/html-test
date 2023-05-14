@@ -1,4 +1,9 @@
 .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
 	padding: 26px 0 18px;
 	border-bottom: 1px solid $c-light-gray;
 
