@@ -8,7 +8,9 @@
 		position: fixed;
 		right: 0;
 		top: 82px;
+		bottom: 0;
 		border-left: 1px solid $c-light-gray;
 		align-self: stretch;
+		overflow-y: auto;
 	}
 }

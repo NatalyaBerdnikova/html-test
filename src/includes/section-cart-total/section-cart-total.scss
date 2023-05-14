@@ -1,0 +1,27 @@
+.section-cart-total {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	max-width: 100%;
+	padding: 40px;
+	font-size: 14px;
+	line-height: 243%;
+
+	&__name {
+		&._big {
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 1.5;
+		}
+	}
+
+	&__value {
+		justify-self: end;
+		padding-right: 15px;
+	}
+
+	[data-total] {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 1.5;
+	}
+}
