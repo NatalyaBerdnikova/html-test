@@ -13,6 +13,7 @@
 @import '../../components/button/button';
 @import '../../components/product-card/product-card';
 @import '../../components/text-input/text-input';
+@import '../../components/steps/steps';
 
 // ======= INCLUDES =======
 @import '../../includes/header/header';
@@ -20,6 +21,7 @@
 @import '../../includes/counter/counter';
 @import '../../includes/section-promocode/section-promocode';
 @import '../../includes/section-cart-total/section-cart-total';
+@import '../../includes/purchase-wizard/purchase-wizard';
 
 // ======= PAGES =======
 @import 'pages/main';

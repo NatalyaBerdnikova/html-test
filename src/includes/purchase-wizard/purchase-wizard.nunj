@@ -1,0 +1,21 @@
+{% from '../../components/steps/steps.nunj' import steps %}
+
+{% set step_items = [
+  {
+    text: 'Account',
+    className: '_completed'
+  }, {
+    text: 'Shipping',
+    className: '_completed'
+  }, {
+    text: 'Billing',
+    className: '_active'
+  }, {
+    text: 'Review',
+    className: '_disabled'
+  }
+] %}
+
+<section class="purchase-wizard">
+  {{ steps({ steps: step_items }) }}
+</section>

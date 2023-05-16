@@ -2,15 +2,22 @@
 	&__container {
 		display: flex;
 		justify-content: space-between;
+		min-height: calc(100vh - 82px);
+		padding-top: 82px;
+
+		@include min-screen(768px) {
+			padding-right: unset;
+		}
 	}
 
 	&__cart {
-		position: fixed;
-		right: 0;
-		top: 82px;
-		bottom: 0;
+		position: relative;
 		border-left: 1px solid $c-light-gray;
-		align-self: stretch;
 		overflow-y: auto;
+		align-self: stretch;
+	}
+
+	&__purchase-wizard {
+		flex-grow: 1;
 	}
 }

@@ -1,0 +1,13 @@
+{% macro steps(props) %}
+  <div class="steps">
+    {% for step in props.steps %}
+      <div class="steps__item{% if step.className %} {{ step.className }}{% endif %}" data-step="{{ loop.index }}">
+        <span class="steps__item-index">{{ loop.index }}</span>
+        {% if loop.index !== loop.length %}
+          <div class="steps__item-divider"></div>
+        {% endif %}
+        <span>{{ step.text }}</span>
+      </div>
+    {% endfor %}
+  </div>
+{% endmacro %}

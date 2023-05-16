@@ -4,7 +4,9 @@
 		{% include '../includes/header/header.nunj' %}
 
 		<div class="main__container container">
-				<section></section>
+				<div class="main__purchase-wizard">
+						{% include '../includes/purchase-wizard/purchase-wizard.nunj' %}
+				</div>
 				<aside class="main__cart">
 						<div class="main__cart-content">
 								{% include '../includes/section-cart/section-cart.nunj' %}
