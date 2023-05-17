@@ -1,0 +1,74 @@
+{% from '../../../../components/icon/icon.nunj' import icon %}
+{% from '../../../../components/text-input/text-input.nunj' import textInput %}
+{% from '../../../../components/button/button.nunj' import button %}
+
+<section class="bill-step" data-purchase-wizard-step="bill">
+  <h5 class="bill-step__title title">
+    Billing Information
+  </h5>
+  <form>
+    <div class="bill-step__payment-methods">
+      <label class="bill-step__payment-method">
+        <input class="custom-radio" type="radio" checked="true" name="pay_by" value="card">
+        <span>Pay with Credit Card</span>
+      </label>
+      <label class="bill-step__payment-method">
+        <input class="custom-radio" type="radio" name="pay_by" value="paypal">
+        {{ icon({ iconName: 'paypal', attr: "width='85px' height='23px'" }) }}
+      </label>
+    </div>
+    <div class="bill-step__card">
+      {{ textInput({
+          label: 'Name on card',
+          placeholder: 'Placeholder Text'
+        }) }}
+      <div>
+        <label class="custom-label">
+          Card number
+        </label>
+        <div class="bill-step__card-line">
+          {{ textInput() }}
+          {{ textInput() }}
+          {{ textInput() }}
+          {{ textInput() }}
+        </div>
+      </div>
+      <div class="bill-step__card-line">
+        {{ textInput({
+            label: 'Expire date'
+          }) }}
+        {{ textInput({
+            label: 'CVV code',
+            tip: 'Secret code on the back of the card'
+          }) }}
+      </div>
+    </div>
+    <div class="bill-step__agreements">
+      <div class="bill-step__agreement">
+        <input id="save_card" class="custom-checkbox-input" type="checkbox" checked="true" value="save_card">
+        <label for="save_card" class="custom-checkbox-label">
+          <div class="custom-checkbox"></div>
+          Save information of this credit card
+        </label>
+      </div>
+      <div class="bill-step__agreement">
+        <input id="agree_terms" class="custom-checkbox-input" type="checkbox" value="agree_terms">
+        <label for="agree_terms" class="custom-checkbox-label">
+          <div class="custom-checkbox"></div>
+          I accept the
+          <a href="#" class="bill-step__doc-link">
+            &nbsp;terms and comditions&nbsp;
+          </a>
+          and the
+          <a href="#" class="bill-step__doc-link">
+            &nbsp;Privacy Policies&nbsp;
+          </a>
+        </label>
+      </div>
+    </div>
+  </form>
+  <div class="bill-step__buttons">
+    {{ button({ className: "_transparent", children: 'Back' }) }}
+    {{ button({ children: 'Check Out' }) }}
+  </div>
+</section>

@@ -17,5 +17,8 @@
 ] %}
 
 <section class="purchase-wizard">
-  {{ steps({ steps: step_items }) }}
+  <div class="purchase-wizard__steps">
+    {{ steps({ steps: step_items }) }}
+  </div>
+  {% include './blocks/bill-step/bill-step.nunj' %}
 </section>

@@ -5,7 +5,7 @@
 @import 'reset';
 @import 'global';
 @import 'layout';
-// @import 'controls';
+@import 'controls';
 
 // ======= COMPONENTS =======
 @import '../../components/title/title';
@@ -14,6 +14,7 @@
 @import '../../components/product-card/product-card';
 @import '../../components/text-input/text-input';
 @import '../../components/steps/steps';
+@import '../../components/tooltip/tooltip';
 
 // ======= INCLUDES =======
 @import '../../includes/header/header';
@@ -22,6 +23,7 @@
 @import '../../includes/section-promocode/section-promocode';
 @import '../../includes/section-cart-total/section-cart-total';
 @import '../../includes/purchase-wizard/purchase-wizard';
+@import '../../includes/purchase-wizard/blocks/bill-step/bill-step';
 
 // ======= PAGES =======
 @import 'pages/main';
