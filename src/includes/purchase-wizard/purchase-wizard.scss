@@ -1,8 +1,11 @@
 .purchase-wizard {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	padding: 49px 0 0;
+
+	@include min-screen(1640px) {
+		align-items: center;
+	}
 
 	&__steps {
 		width: 100%;

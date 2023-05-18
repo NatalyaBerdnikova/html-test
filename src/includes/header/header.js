@@ -8,6 +8,20 @@ class Header {
 
 	addListeners() {
 		this.mobileButton.addEventListener('click', this.toggleMobileMenu.bind(this));
+
+		this.toggleMobileMenuByDevice();
+		window.addEventListener('resize', this.toggleMobileMenuByDevice.bind(this));
+	}
+
+	toggleMobileMenuByDevice() {
+		const isMobile = document.body.clientWidth < 1024;
+
+		if (isMobile) {
+			this.mobileButton.classList.remove('_opened');
+			this.mobileMenu.classList.remove('_opened');
+		} else {
+			this.mobileMenu.classList.add('_opened');
+		}
 	}
 
 	toggleMobileMenu() {

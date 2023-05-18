@@ -5,7 +5,7 @@
 		min-height: calc(100vh - 82px);
 		padding-top: 82px;
 
-		@include min-screen(768px) {
+		@include min-screen(1024px) {
 			padding-right: unset;
 		}
 	}
@@ -25,7 +25,12 @@
 
 		@include min-screen(1024px) {
 			top: unset;
+			left: unset;
 			position: relative;
+		}
+
+		@include min-screen(1650px) {
+			border-right: 1px solid $c-light-gray;
 		}
 
 		&._opened {
