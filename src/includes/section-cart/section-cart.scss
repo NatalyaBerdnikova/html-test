@@ -1,6 +1,13 @@
 .section-cart {
-	max-width: 410px;
-	padding: 40px;
+	padding: 20px;
+
+	@include min-screen(768px) {
+		padding: 40px;
+	}
+
+	@include min-screen(1024px) {
+		max-width: 410px;
+	}
 
 	&__title {
 		margin-bottom: 30px;
@@ -9,5 +16,13 @@
 	&__items {
 		display: grid;
 		gap: 37px;
+
+		@include min-screen(768px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include min-screen(1024px) {
+			grid-template-columns: auto;
+		}
 	}
 }

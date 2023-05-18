@@ -1,14 +1,22 @@
 .bill-step {
 	&__title {
-		margin-bottom: 39px;
-		padding: 0 30px;
+		margin-bottom: 19px;
+
+		@include min-screen(768px) {
+			margin-bottom: 39px;
+			padding: 0 30px;
+		}
 	}
 
 	&__payment-methods {
 		display: flex;
 		align-items: center;
-		margin-bottom: 39px;
-		padding: 0 30px;
+		margin-bottom: 20px;
+
+		@include min-screen(768px) {
+			margin-bottom: 39px;
+			padding: 0 30px;
+		}
 	}
 
 	&__payment-method {
@@ -16,31 +24,51 @@
 		align-items: center;
 
 		&:not(:last-of-type) {
-			margin-right: 82px;
+			margin-right: 22px;
+		}
+
+		@include min-screen(768px) {
+			&:not(:last-of-type) {
+				margin-right: 82px;
+			}
 		}
 	}
 
 	&__card {
 		display: grid;
 		gap: 20px;
-		width: 550px;
-		padding: 20px 30px 46px;
-		border: 1px solid $c-light-gray;
-		box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.19);
-		border-radius: 5px;
-		margin-bottom: 38px;
+		margin-bottom: 36px;
+
+		@include min-screen(768px) {
+			width: 550px;
+			padding: 20px 30px 46px;
+			margin-bottom: 38px;
+			border-radius: 5px;
+			border: 1px solid $c-light-gray;
+			box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.19);
+		}
 	}
 
 	&__card-line {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		gap: 30px;
+		gap: 5px;
+
+		@include min-screen(768px) {
+			gap: 30px;
+		}
 	}
 
 	&__agreements {
-		padding: 0 30px;
-		margin-bottom: 38px;
+		margin-bottom: 46px;
 		color: $c-gray;
+		font-size: 14px;
+		line-height: 16px;
+
+		@include min-screen(768px) {
+			padding: 0 30px;
+			margin-bottom: 38px;
+		}
 	}
 
 	&__agreement + &__agreement {
@@ -59,6 +87,10 @@
 	&__buttons {
 		display: flex;
 		justify-content: space-between;
-		padding: 0 30px;
+		padding: 0 0 20px;
+
+		@include min-screen(768px) {
+			padding: 0 30px 20px;
+		}
 	}
 }

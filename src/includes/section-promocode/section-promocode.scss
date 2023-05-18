@@ -1,6 +1,13 @@
 .section-promocode {
-	max-width: 410px;
-	padding: 40px;
+	padding: 20px;
+
+	@include min-screen(768px) {
+		padding: 40px;
+	}
+
+	@include min-screen(1024px) {
+		max-width: 410px;
+	}
 
 	&__title {
 		margin-bottom: 30px;

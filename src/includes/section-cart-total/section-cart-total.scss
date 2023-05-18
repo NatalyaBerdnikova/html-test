@@ -2,9 +2,13 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	max-width: 100%;
-	padding: 40px;
 	font-size: 14px;
 	line-height: 243%;
+	padding: 20px;
+
+	@include min-screen(768px) {
+		padding: 40px;
+	}
 
 	&__name {
 		&._big {

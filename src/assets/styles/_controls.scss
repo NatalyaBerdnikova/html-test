@@ -70,7 +70,6 @@
 
 .custom-checkbox-label {
 	display: flex;
-	align-items: center;
 	cursor: pointer;
 }
 
@@ -80,6 +79,7 @@
 	height: 18px;
 	border: 1px solid $c-light-gray;
 	margin-right: 8px;
+	flex-shrink: 0;
 
 	&::after {
 		position: absolute;

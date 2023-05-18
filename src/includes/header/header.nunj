@@ -20,5 +20,10 @@
 						iconName: 'cart'
 					}) }}
 				</button>
+				<button class="header__mobile-menu-button" data-mobile-menu-button="data-mobile-menu-button">
+						<span class="header__mobile-menu-button-line"></span>
+						<span class="header__mobile-menu-button-line"></span>
+						<span class="header__mobile-menu-button-line"></span>
+				</button>
 		</div>
 </div>

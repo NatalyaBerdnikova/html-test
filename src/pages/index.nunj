@@ -7,7 +7,7 @@
 				<div class="main__purchase-wizard">
 						{% include '../includes/purchase-wizard/purchase-wizard.nunj' %}
 				</div>
-				<aside class="main__cart">
+				<aside class="main__cart" data-mobile-menu="data-mobile-menu">
 						<div class="main__cart-content">
 								{% include '../includes/section-cart/section-cart.nunj' %}
 								<div class="divider"></div>

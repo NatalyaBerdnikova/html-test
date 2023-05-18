@@ -55,14 +55,10 @@
         <input id="agree_terms" class="custom-checkbox-input" type="checkbox" value="agree_terms">
         <label for="agree_terms" class="custom-checkbox-label">
           <div class="custom-checkbox"></div>
-          I accept the
-          <a href="#" class="bill-step__doc-link">
-            &nbsp;terms and comditions&nbsp;
-          </a>
-          and the
-          <a href="#" class="bill-step__doc-link">
-            &nbsp;Privacy Policies&nbsp;
-          </a>
+          <span>
+            I accept the&nbsp;<a href="#" class="bill-step__doc-link">terms&nbsp;and&nbsp;comditions</a>
+            and the&nbsp;<a href="#" class="bill-step__doc-link">Privacy Policies</a>
+          </span>
         </label>
       </div>
     </div>

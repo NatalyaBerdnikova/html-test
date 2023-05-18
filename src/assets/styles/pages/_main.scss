@@ -11,10 +11,26 @@
 	}
 
 	&__cart {
-		position: relative;
+		position: fixed;
+		top: 82px;
+		left: 0;
+		right: 0;
+		bottom: 0;
 		border-left: 1px solid $c-light-gray;
 		overflow-y: auto;
 		align-self: stretch;
+		background-color: $c-white;
+		transition: transform 0.5s ease-out;
+		transform: translateY(-120%);
+
+		@include min-screen(1024px) {
+			top: unset;
+			position: relative;
+		}
+
+		&._opened {
+			transform: translateY(0);
+		}
 	}
 
 	&__purchase-wizard {
