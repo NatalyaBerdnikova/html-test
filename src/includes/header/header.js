@@ -1,21 +1,19 @@
 class Header {
-  constructor() {
-    this.mobileButton = document.querySelector('[data-mobile-menu-button]');
-    this.mobileMenu = document.querySelector('[data-mobile-menu]');
+	constructor() {
+		this.mobileButton = document.querySelector('[data-mobile-menu-button]');
+		this.mobileMenu = document.querySelector('[data-mobile-menu]');
 
-    this.addListeners();
-  }
+		this.addListeners();
+	}
 
-  addListeners() {
-    console.log('addListeners');
-    this.mobileButton.addEventListener('click', this.toggleMobileMenu.bind(this));
-  }
+	addListeners() {
+		this.mobileButton.addEventListener('click', this.toggleMobileMenu.bind(this));
+	}
 
-  toggleMobileMenu() {
-    console.log('toggleMobileMenu');
-    this.mobileButton.classList.toggle('_opened');
-    this.mobileMenu.classList.toggle('_opened')
-  }
+	toggleMobileMenu() {
+		this.mobileButton.classList.toggle('_opened');
+		this.mobileMenu.classList.toggle('_opened');
+	}
 }
 
 export default new Header();
