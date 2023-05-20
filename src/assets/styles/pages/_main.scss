@@ -2,8 +2,8 @@
 	&__container {
 		display: flex;
 		justify-content: space-between;
-		min-height: calc(100vh - 82px);
-		padding-top: 82px;
+		min-height: calc(100vh - 80px);
+		padding-top: 80px;
 
 		@include min-screen(1024px) {
 			padding-right: unset;
@@ -12,7 +12,7 @@
 
 	&__cart {
 		position: fixed;
-		top: 82px;
+		top: 80px;
 		left: 0;
 		right: 0;
 		bottom: 0;
@@ -27,6 +27,7 @@
 			top: unset;
 			left: unset;
 			position: relative;
+			width: 412px;
 		}
 
 		@include min-screen(1650px) {

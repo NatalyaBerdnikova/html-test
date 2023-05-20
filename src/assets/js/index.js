@@ -14,7 +14,7 @@ class ProjectApp {
 		this.env = require('./utils/env').default;
 		this.utils = require('./utils/utils').default;
 		this.classes = {
-			// Signal: require('./classes/Signal').default,
+			Cart: require('./classes/Cart').default,
 		};
 		this.components = {};
 		this.helpers = {};

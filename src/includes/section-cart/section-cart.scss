@@ -5,10 +5,6 @@
 		padding: 40px;
 	}
 
-	@include min-screen(1024px) {
-		max-width: 410px;
-	}
-
 	&__title {
 		margin-bottom: 30px;
 	}
