@@ -9,6 +9,7 @@ class Cart {
 	constructor() {
 		this.subTotalNode = document.querySelector('[data-subtotal]');
 		this.totalNode = document.querySelector('[data-total]');
+		this.productsCountNode = document.querySelector('[data-cart-product-count]');
 
 		this.items = [];
 
@@ -42,6 +43,10 @@ class Cart {
 			Object.values(CONST_PRICES).reduce((acc, price) => acc + price, 0) + this.subTotal;
 	}
 
+	calculateProductsCount() {
+		this.productsCount = this.items.reduce((acc, { count }) => acc + count, 0);
+	}
+
 	refreshSubSum() {
 		this.calculateSubTotal();
 		this.subTotalNode.innerHTML = this.prettifySumString(this.subTotal);
@@ -52,7 +57,13 @@ class Cart {
 		this.totalNode.innerHTML = this.prettifySumString(this.totalSum);
 	}
 
+	refreshProductsCount() {
+		this.calculateProductsCount();
+		this.productsCountNode.innerHTML = this.productsCount;
+	}
+
 	refresh() {
+		this.refreshProductsCount();
 		this.refreshSubSum();
 		this.refreshSum();
 	}

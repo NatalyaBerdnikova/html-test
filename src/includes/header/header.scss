@@ -34,6 +34,7 @@
 	}
 
 	&__cart {
+		position: relative;
 		display: flex;
 		justify-content: flex-start;
 		width: 30px;
@@ -48,6 +49,25 @@
 	&__cart-icon {
 		width: 26px;
 		height: 25px;
+	}
+
+	&__cart-products-count {
+		position: absolute;
+		top: -4px;
+		right: 0;
+		border-radius: 50%;
+		background-color: $c-accent;
+		min-width: 13px;
+		min-height: 13px;
+		transform: scale(0);
+		color: $c-white;
+		font-size: 10px;
+		line-height: 12px;
+		padding: 0 2px;
+
+		&._visible {
+			transform: scale(1);
+		}
 	}
 
 	&__mobile-menu-button {
