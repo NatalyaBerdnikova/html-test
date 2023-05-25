@@ -2,8 +2,8 @@
 {% from '../../../../components/text-input/text-input.nunj' import textInput %}
 {% from '../../../../components/button/button.nunj' import button %}
 
-<section class="bill-step" data-purchase-wizard-step="bill">
-  <h5 class="bill-step__title title">
+<section class="bill-step step" data-purchase-wizard-step="bill">
+  <h5 class="bill-step__title step__title title">
     Billing Information
   </h5>
   <form>
@@ -63,8 +63,8 @@
       </div>
     </div>
   </form>
-  <div class="bill-step__buttons">
-    {{ button({ className: "_transparent", children: 'Back' }) }}
-    {{ button({ children: 'Check Out' }) }}
+  <div class="step__buttons">
+    {{ button({ className: "_transparent", attributes: 'data-step-back-button', children: 'Back' }) }}
+    {{ button({ attributes: 'data-step-forward-button', children: 'Check Out' }) }}
   </div>
 </section>

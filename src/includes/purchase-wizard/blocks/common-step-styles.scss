@@ -1,0 +1,39 @@
+.step {
+	transition: opacity 0.15s ease-out;
+
+	@include min-screen(768px) {
+		padding: 0 20px;
+	}
+
+	@include min-screen(1640px) {
+		padding: 0;
+		min-width: 720px;
+	}
+
+	&__title {
+		margin-bottom: 19px;
+
+		@include min-screen(768px) {
+			margin-bottom: 39px;
+			padding: 0 30px;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 0 20px;
+
+		@include min-screen(768px) {
+			padding: 0 30px 20px;
+		}
+
+		@include min-screen(1200px) {
+			padding: 0 58px 20px 30px;
+		}
+	}
+
+	&._hidden {
+		display: none;
+	}
+}

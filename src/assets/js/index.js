@@ -20,6 +20,8 @@ class ProjectApp {
 		this.helpers = {};
 		this.modules = {
 			Header: require('../../includes/header/header'),
+			PurchaseWizard: require('../../includes/purchase-wizard/purchase-wizard'),
+			Steps: require('../../components/steps/steps'),
 		};
 		document.addEventListener('DOMContentLoaded', () => {
 			document.documentElement.classList.remove('_loading');

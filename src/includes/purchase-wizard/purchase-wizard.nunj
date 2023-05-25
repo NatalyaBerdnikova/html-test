@@ -1,4 +1,5 @@
 {% from '../../components/steps/steps.nunj' import steps %}
+{% from '../../components/wizard-dummy-step/wizard-dummy-step.nunj' import dummyStep %}
 
 {% set step_items = [
   {
@@ -20,5 +21,10 @@
   <div class="purchase-wizard__steps">
     {{ steps({ steps: step_items }) }}
   </div>
-  {% include './blocks/bill-step/bill-step.nunj' %}
+  <div data-purchase-wizard="data-purchase-wizard">
+    {{ dummyStep({ title: 'Account Info', blockBack: true }) }}
+    {{ dummyStep({ title: 'Shipping Info' }) }}
+    {% include './blocks/bill-step/bill-step.nunj' %}
+    {{ dummyStep({ title: 'Review', blockForward: true }) }}
+  </div>
 </section>

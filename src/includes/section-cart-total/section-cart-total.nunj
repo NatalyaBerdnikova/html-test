@@ -4,12 +4,14 @@
     value: 1050,
     currency: '$',
     attributes: 'data-subtotal'
-  }, {
+  },
+  {
     name: 'Tax',
     value: 100,
     currency: '$',
     attributes: 'data-tax'
-  }, {
+  },
+  {
     name: 'Shipping',
     value: 150,
     currency: '$',

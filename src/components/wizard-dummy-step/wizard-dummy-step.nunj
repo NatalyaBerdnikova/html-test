@@ -1,0 +1,17 @@
+{% from '../button/button.nunj' import button %}
+
+{% macro dummyStep(props) %}
+  <section class="step _hidden">
+    <h5 class="step__title title">
+      {{ props.title }}
+    </h5>
+    <div class="step__buttons">
+      {% if not props.blockBack %}
+        {{ button({ className: "_transparent", attributes: 'data-step-back-button', children: 'Back' }) }}
+      {% endif %}
+      {% if not props.blockForward %}
+        {{ button({ attributes: 'data-step-forward-button', children: 'Next' }) }}
+      {% endif %}
+    </div>
+  </section>
+{% endmacro %}

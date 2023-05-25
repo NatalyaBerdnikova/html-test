@@ -69,7 +69,7 @@ class Cart {
 	}
 
 	prettifySumString(number) {
-		const preparedString = `$ ${number.toLocaleString('ru-RU')}`;
+		const preparedString = `$${number.toLocaleString('ru-RU')}`;
 		return preparedString;
 	}
 }
