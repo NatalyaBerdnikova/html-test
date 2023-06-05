@@ -8,11 +8,14 @@
   <div class="section-promocode__input-wrapper">
     <div class="section-promocode__input">
       {{ textInput({
-        placeholder: 'Placeholder Text'
+        placeholder: 'Placeholder Text',
+        labelAttributes: 'data-promocode-label',
+        attributes: 'data-promocode-input'
       }) }}
     </div>
     {{ button({
       className: '',
+      attributes: 'data-promocode-button',
       children: 'Apply'
     }) }}
   </div>

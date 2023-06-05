@@ -15,6 +15,7 @@ class ProjectApp {
 		this.utils = require('./utils/utils').default;
 		this.classes = {
 			Cart: require('./classes/Cart').default,
+			Promocode: require('./classes/Promocode').default,
 		};
 		this.components = {};
 		this.helpers = {};

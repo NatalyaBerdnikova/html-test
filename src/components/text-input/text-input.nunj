@@ -1,7 +1,7 @@
 {% from '../tooltip/tooltip.nunj' import tooltip %}
 
 {% macro textInput(props) %}
-  <label>
+  <label class="text-input__wrapper" {% if props.labelAttributes %} {{ props.labelAttributes }} {% endif %}>
     {% if props.label %}
       <span class="text-input__label custom-label">
         {{ props.label }}
