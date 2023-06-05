@@ -18,30 +18,7 @@
       </label>
     </div>
     <div class="bill-step__card">
-      {{ textInput({
-          label: 'Name on card',
-          placeholder: 'Placeholder Text'
-        }) }}
-      <div>
-        <label class="custom-label">
-          Card number
-        </label>
-        <div class="bill-step__card-line">
-          {{ textInput() }}
-          {{ textInput() }}
-          {{ textInput() }}
-          {{ textInput() }}
-        </div>
-      </div>
-      <div class="bill-step__card-line">
-        {{ textInput({
-            label: 'Expire date'
-          }) }}
-        {{ textInput({
-            label: 'CVV code',
-            tip: 'Secret code on the back of the card'
-          }) }}
-      </div>
+      {% include "../../../card-form/card-form.nunj" %}
     </div>
     <div class="bill-step__agreements">
       <div class="bill-step__agreement">

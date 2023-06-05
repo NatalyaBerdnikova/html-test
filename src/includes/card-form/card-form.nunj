@@ -1,0 +1,31 @@
+{% from '../../components/text-input/text-input.nunj' import textInput %}
+
+<div class="card-form" data-card-form="data-card-form">
+  {{ textInput({
+    label: 'Name on card',
+    placeholder: 'Placeholder Text',
+    attributes: 'required data-card-name'
+  }) }}
+  <div>
+    <label class="custom-label">
+      Card number
+    </label>
+    <div class="card-form__line">
+      {{ textInput({ attributes: 'required data-card-number="0"' }) }}
+      {{ textInput({ attributes: 'required data-card-number="1"' }) }}
+      {{ textInput({ attributes: 'required data-card-number="2"' }) }}
+      {{ textInput({ attributes: 'required data-card-number="3"' }) }}
+    </div>
+  </div>
+  <div class="card-form__line">
+    {{ textInput({
+        label: 'Expire date',
+        attributes: 'required data-card-date'
+      }) }}
+    {{ textInput({
+        label: 'CVV code',
+        tip: 'Secret code on the back of the card',
+        attributes: 'required max-length="3" data-card-cvv'
+      }) }}
+  </div>
+</div>

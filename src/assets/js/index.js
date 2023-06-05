@@ -23,6 +23,7 @@ class ProjectApp {
 			Header: require('../../includes/header/header'),
 			PurchaseWizard: require('../../includes/purchase-wizard/purchase-wizard'),
 			Steps: require('../../components/steps/steps'),
+			Card: require('../../includes/card-form/card-form'),
 		};
 		document.addEventListener('DOMContentLoaded', () => {
 			document.documentElement.classList.remove('_loading');
