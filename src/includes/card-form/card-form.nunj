@@ -1,7 +1,7 @@
-{% from '../../components/text-input/text-input.nunj' import textInput %}
+{% from '../../components/controls/input/input.nunj' import input %}
 
 <div class="card-form" data-card-form="data-card-form">
-  {{ textInput({
+  {{ input({
     label: 'Name on card',
     placeholder: 'Placeholder Text',
     attributes: 'required data-card-name'
@@ -11,18 +11,19 @@
       Card number
     </label>
     <div class="card-form__line">
-      {{ textInput({ attributes: 'required data-card-number="0"' }) }}
-      {{ textInput({ attributes: 'required data-card-number="1"' }) }}
-      {{ textInput({ attributes: 'required data-card-number="2"' }) }}
-      {{ textInput({ attributes: 'required data-card-number="3"' }) }}
+      {{ input({ type: 'number', attributes: 'required data-card-number="0"' }) }}
+      {{ input({ type: 'number', attributes: 'required data-card-number="1"' }) }}
+      {{ input({ type: 'number', attributes: 'required data-card-number="2"' }) }}
+      {{ input({ type: 'number', attributes: 'required data-card-number="3"' }) }}
     </div>
   </div>
   <div class="card-form__line">
-    {{ textInput({
+    {{ input({
         label: 'Expire date',
         attributes: 'required data-card-date'
       }) }}
-    {{ textInput({
+    {{ input({
+        type: 'number',
         label: 'CVV code',
         tip: 'Secret code on the back of the card',
         attributes: 'required max-length="3" data-card-cvv'

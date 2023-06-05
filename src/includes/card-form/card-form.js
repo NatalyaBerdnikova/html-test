@@ -26,6 +26,7 @@ class CardForm {
 			input.addEventListener('input', this.inputNumber.bind(this));
 		});
 		this.dateInput.addEventListener('input', this.inputDate.bind(this));
+		this.cvvInput.addEventListener('input', this.inputCvv.bind(this));
 	}
 
 	inputName(event) {
@@ -57,6 +58,14 @@ class CardForm {
 		} else {
 			event.target.value = this.date.slice(0, 2);
 		}
+
+		if (this.date.length >= 4) {
+			this.cvvInput.focus();
+		}
+	}
+
+	inputCvv(event) {
+		this.cvv = event.target.value;
 	}
 }
 
