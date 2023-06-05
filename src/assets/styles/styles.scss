@@ -15,7 +15,6 @@
 
 // ======= COMPONENTS =======
 @import '../../components/title/title';
-@import '../../components/divider/divider';
 @import '../../components/button/button';
 @import '../../components/product-card/product-card';
 @import '../../components/steps/steps';
@@ -31,6 +30,7 @@
 @import '../../includes/purchase-wizard/blocks/bill-step/bill-step';
 @import '../../includes/purchase-wizard/blocks/common-step-styles';
 @import '../../includes/card-form/card-form';
+@import '../../includes/divider/divider';
 
 // ======= PAGES =======
 @import 'pages/main';
