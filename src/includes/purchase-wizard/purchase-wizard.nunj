@@ -1,5 +1,6 @@
 {% from '../../components/steps/steps.nunj' import steps %}
 {% from '../../components/wizard-dummy-step/wizard-dummy-step.nunj' import dummyStep %}
+{% from '../../components/icon/icon.nunj' import icon %}
 
 {% set step_items = [
   {
