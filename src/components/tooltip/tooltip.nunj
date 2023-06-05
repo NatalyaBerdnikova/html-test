@@ -1,8 +1,0 @@
-{% macro tooltip(props) %}
-  <span class="tooltip">
-    <span class="tooltip__text">
-      {{ props.text }}
-    </span>
-    <span class="tooltip__icon">?</span>
-  </span>
-{% endmacro %}
