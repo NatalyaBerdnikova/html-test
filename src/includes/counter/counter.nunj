@@ -1,5 +1,5 @@
 <div class="counter">
-  <button class="counter__decrease" data-counter-decrease="data-counter-decrease"></button>
+  <button class="counter__decrease" aria-label="Decrease product count" data-counter-decrease="data-counter-decrease"></button>
   <span class="counter__count" data-counter-count="data-counter-count">1</span>
-  <button class="counter__increase" data-counter-increase="data-counter-increase"></button>
+  <button class="counter__increase" aria-label="Increase product count" data-counter-increase="data-counter-increase"></button>
 </div>

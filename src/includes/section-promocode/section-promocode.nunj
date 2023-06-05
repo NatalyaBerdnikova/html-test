@@ -1,5 +1,5 @@
-{% from "../../components/text-input/text-input.nunj" import textInput %}
 {% from "../../components/button/button.nunj" import button %}
+{% from "../../components/controls/input/input.nunj" import input %}
 
 <section class="section-promocode">
   <h5 class="section-promocode__title title">
@@ -7,7 +7,7 @@
   </h5>
   <div class="section-promocode__input-wrapper">
     <div class="section-promocode__input">
-      {{ textInput({
+      {{ input({
         placeholder: 'Placeholder Text',
         labelAttributes: 'data-promocode-label',
         attributes: 'data-promocode-input'

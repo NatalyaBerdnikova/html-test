@@ -1,7 +1,7 @@
 {% macro steps(props) %}
   <div class="steps" data-steps="data-steps">
     {% for step in props.steps %}
-      <div class="steps__item{% if step.className %} {{ step.className }}{% endif %}" data-step="{{ loop.index0 }}">
+      <div class="steps__item{% if step.className %} {{ step.className }}{% endif %}" data-step="{{ loop.index0 }}" aria-label="Move to step {{ props.text }}" tabindex="0">
         <span class="steps__item-index">{{ loop.index }}</span>
         <span class="steps__item-text">{{ step.text }}</span>
       </div>

@@ -1,4 +1,4 @@
-.text-input {
+.input {
 	display: block;
 	background-color: $c-medium-gray;
 	border: none;
@@ -8,6 +8,17 @@
 	font-size: 14px;
 	line-height: 1.71;
 	color: $c-cold-gray;
+
+	// Hide arrows in type number input
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	&[type='number'] {
+		-moz-appearance: textfield;
+	}
 
 	&__label {
 		display: flex;

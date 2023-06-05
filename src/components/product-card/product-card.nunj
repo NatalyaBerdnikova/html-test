@@ -4,7 +4,7 @@
     <div class="product-card__right-content">
       <div class="product-card__header">
         <h6 class="product-card__title">{{ props.title }}</h6>
-        <button class="product-card__delete-button" data-delete-button="data-delete-button"></button>
+        <button class="product-card__delete-button" aria-label="Delete product from cart" data-delete-button="data-delete-button"></button>
       </div>
       <div class="product-card__footer">
         {% include '../../includes/counter/counter.nunj' %}

@@ -10,21 +10,6 @@
 		}
 	}
 
-	&__payment-method {
-		display: flex;
-		align-items: center;
-
-		&:not(:last-of-type) {
-			margin-right: 22px;
-		}
-
-		@include min-screen(768px) {
-			&:not(:last-of-type) {
-				margin-right: 82px;
-			}
-		}
-	}
-
 	&__agreements {
 		margin-bottom: 46px;
 		color: $c-gray;

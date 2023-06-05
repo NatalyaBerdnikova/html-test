@@ -7,12 +7,17 @@
 @import 'layout';
 @import 'controls';
 
+// ======= CONTROLS =======
+@import '../../components/controls/label/label';
+@import '../../components/controls/input/input';
+@import '../../components/controls/checkbox/checkbox';
+@import '../../components/controls/radio-button/radio-button';
+
 // ======= COMPONENTS =======
 @import '../../components/title/title';
 @import '../../components/divider/divider';
 @import '../../components/button/button';
 @import '../../components/product-card/product-card';
-@import '../../components/text-input/text-input';
 @import '../../components/steps/steps';
 @import '../../components/tooltip/tooltip';
 

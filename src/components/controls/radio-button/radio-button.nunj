@@ -1,0 +1,13 @@
+{% from '../../icon/icon.nunj' import icon %}
+
+{% macro radioButton(props) %}
+  <label class="custom-radio__label">
+    <input class="custom-radio" type="radio" checked="true" name="{{ props.name }}" value="{{ props.value }}">
+    {% if props.text %}
+      <span>{{ props.text }}</span>
+    {% endif %}
+    {% if props.icon %}
+      {{ icon({ iconName: props.icon, attr: props.iconAttrs }) }}
+    {% endif %}
+  </label>
+{% endmacro %}
