@@ -17,7 +17,6 @@
       }) }}
       {{ radioButton({
         name: 'pay_by',
-        checked: true,
         value: 'paypal',
         icon: 'paypal',
         iconAttrs: "width='85px' height='23px'"

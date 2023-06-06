@@ -1,3 +1,9 @@
+/**
+ * Class for the product card in the cart
+ * - Change the number of items in the cart
+ * - Remove product from the cart
+ * - Display new number in the product card
+ */
 class Product {
 	constructor(node) {
 		if (!node) {
@@ -19,15 +25,16 @@ class Product {
 		this.increaseButton = this.node.querySelector('[data-counter-increase]');
 		this.decreaseButton = this.node.querySelector('[data-counter-decrease]');
 		this.deleteButton = this.node.querySelector('[data-delete-button]');
-
 		this.countNode = this.node.querySelector('[data-counter-count]');
+
 		this.increaseEvent = new CustomEvent('increase', { detail: this.id });
 		this.decreaseEvent = new CustomEvent('decrease', { detail: this.id });
 		this.removeEvent = new CustomEvent('remove', { detail: this.id });
-		this.addEvents(this);
+
+		this.addEventListeners();
 	}
 
-	addEvents() {
+	addEventListeners() {
 		this.increaseButton.addEventListener('click', this.increase.bind(this));
 		this.decreaseButton.addEventListener('click', this.decrease.bind(this));
 		this.deleteButton.addEventListener('click', this.remove.bind(this));
@@ -42,7 +49,7 @@ class Product {
 	decrease() {
 		this.count -= 1;
 		if (this.count <= 0) {
-			this.remove(this);
+			this.remove();
 		}
 		this.countNode.innerText = this.count;
 		this.node.dispatchEvent(this.decreaseEvent);

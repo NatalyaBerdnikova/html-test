@@ -1,5 +1,10 @@
 const CLASS_HIDDEN = '_hidden';
 
+/**
+ * Class for switching wizard steps
+ * - Switch step
+ * - Emit to steps module
+ */
 class PurchaseWizard {
 	constructor() {
 		this.container = document.querySelector('[data-purchase-wizard]');
@@ -13,10 +18,10 @@ class PurchaseWizard {
 		this.wizardSteps = this.container.children;
 
 		this.currentStepIndex = 2;
-		this.init.call(this);
+		this.addEventListeners();
 	}
 
-	init() {
+	addEventListeners() {
 		[...this.wizardSteps].forEach(step => {
 			const backButton = step.querySelector('[data-step-back-button]');
 			backButton &&
@@ -24,6 +29,7 @@ class PurchaseWizard {
 					this.changeCurrentWizardStep(this.currentStepIndex - 1);
 					this.emitStepChanged();
 				});
+
 			const forwardButton = step.querySelector('[data-step-forward-button]');
 			forwardButton &&
 				forwardButton.addEventListener('click', () => {
@@ -32,9 +38,10 @@ class PurchaseWizard {
 				});
 		});
 
-		this.stepsContainer.addEventListener('stepChanged', event =>
-			this.changeCurrentWizardStep(event.detail)
-		);
+		this.stepsContainer &&
+			this.stepsContainer.addEventListener('stepChanged', event =>
+				this.changeCurrentWizardStep(event.detail)
+			);
 	}
 
 	changeCurrentWizardStep(newIndex) {
@@ -45,7 +52,7 @@ class PurchaseWizard {
 
 	emitStepChanged() {
 		const event = new CustomEvent('change', { detail: this.currentStepIndex });
-		this.stepsContainer.dispatchEvent(event);
+		this.stepsContainer && this.stepsContainer.dispatchEvent(event);
 	}
 }
 

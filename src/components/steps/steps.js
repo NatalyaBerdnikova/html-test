@@ -4,6 +4,13 @@ const STEP_CLASSES = {
 	disabled: 'steps__item _disabled',
 };
 
+const DEFAULT_STEP_INDEX = 2;
+
+/**
+ * Class for switching steps
+ * - Emit to own container if step switched
+ * - Animate switching
+ */
 class Steps {
 	constructor() {
 		this.container = document.querySelector('[data-steps]');
@@ -13,23 +20,24 @@ class Steps {
 			return;
 		}
 
-		this.steps = this.container.querySelectorAll('[data-step]');
+		this.stepButtons = this.container.querySelectorAll('[data-step]');
 		this.progressBar = this.container.querySelector('[data-steps-progress]');
-		this.currentStepIndex = 2;
+		this.currentStepIndex = DEFAULT_STEP_INDEX;
 
-		this.initializeButtons();
-		this.changeStepClass();
-		this.changeProgressBarStyles();
-		this.container.addEventListener('change', event => this.changeCurrentStep(event.detail));
+		this.init();
 	}
 
-	initializeButtons() {
-		[...this.steps].forEach(step => {
+	init() {
+		[...this.stepButtons].forEach(step => {
 			step.addEventListener('click', () => {
 				this.changeCurrentStep(step.dataset.step);
 				this.emitStepChange();
 			});
 		});
+
+		this.changeStepClass();
+		this.changeProgressBarStyles();
+		this.container.addEventListener('change', event => this.changeCurrentStep(event.detail));
 	}
 
 	emitStepChange() {
@@ -46,7 +54,7 @@ class Steps {
 	changeStepClass() {
 		clearTimeout(this.timeout);
 
-		[...this.steps].forEach((step, index) => {
+		[...this.stepButtons].forEach((step, index) => {
 			if (index < this.currentStepIndex) {
 				step.classList = STEP_CLASSES.completed;
 				return;
@@ -55,6 +63,8 @@ class Steps {
 				step.classList = STEP_CLASSES.disabled;
 				return;
 			}
+
+			// Timeout to animate the step after the css transition progress bar completes
 			this.timeout = setTimeout(() => {
 				step.classList = STEP_CLASSES.active;
 			}, 150);
@@ -62,7 +72,9 @@ class Steps {
 	}
 
 	changeProgressBarStyles() {
-		this.progressBar.style.transform = `scaleX(${this.currentStepIndex / (this.steps.length - 1)})`;
+		this.progressBar.style.transform = `scaleX(${
+			this.currentStepIndex / (this.stepButtons.length - 1)
+		})`;
 	}
 }
 

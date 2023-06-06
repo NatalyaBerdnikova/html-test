@@ -26,7 +26,7 @@
         type: 'number',
         label: 'CVV code',
         tip: 'Secret code on the back of the card',
-        attributes: 'required max-length="3" data-card-cvv'
+        attributes: 'required data-card-cvv'
       }) }}
   </div>
 </div>

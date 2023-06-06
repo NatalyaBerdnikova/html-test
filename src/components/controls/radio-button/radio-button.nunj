@@ -2,7 +2,7 @@
 
 {% macro radioButton(props) %}
   <label class="custom-radio__label">
-    <input class="custom-radio" type="radio" checked="true" name="{{ props.name }}" value="{{ props.value }}">
+    <input class="custom-radio" type="radio" {% if props.checked %} checked="true" {% endif %} name="{{ props.name }}" value="{{ props.value }}">
     {% if props.text %}
       <span>{{ props.text }}</span>
     {% endif %}

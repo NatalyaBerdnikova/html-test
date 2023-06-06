@@ -5,12 +5,12 @@
   <h5 class="section-promocode__title title">
     Promo code
   </h5>
-  <div class="section-promocode__input-wrapper">
+  <div class="section-promocode__input-wrapper" data-promocode-container="data-promocode-container">
     <div class="section-promocode__input">
       {{ input({
         placeholder: 'Placeholder Text',
         labelAttributes: 'data-promocode-label',
-        attributes: 'data-promocode-input'
+        attributes: 'data-promocode-input title="PROMO100, PROMO200, PROMO250"'
       }) }}
     </div>
     {{ button({
