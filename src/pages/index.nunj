@@ -3,18 +3,20 @@
 {% block content %}
 		{% include '../includes/header/header.nunj' %}
 
-		<div class="main__container container">
-				<div class="main__purchase-wizard">
-						{% include '../includes/purchase-wizard/purchase-wizard.nunj' %}
-				</div>
-				<aside class="main__cart _opened" data-mobile-menu="data-mobile-menu">
-						<div class="main__cart-content">
-								{% include '../includes/section-cart/section-cart.nunj' %}
-								<div class="divider"></div>
-								{% include '../includes/section-promocode/section-promocode.nunj' %}
-								<div class="divider"></div>
-								{% include '../includes/section-cart-total/section-cart-total.nunj' %}
+		<div class="main">
+				<div class="container main__container">
+						<div class="main__purchase-wizard">
+								{% include '../includes/purchase-wizard/purchase-wizard.nunj' %}
 						</div>
-				</aside>
+						<aside class="main__cart _opened" data-mobile-menu="data-mobile-menu">
+								<div class="main__cart-content">
+										{% include '../includes/section-cart/section-cart.nunj' %}
+										<div class="divider"></div>
+										{% include '../includes/section-promocode/section-promocode.nunj' %}
+										<div class="divider"></div>
+										{% include '../includes/section-cart-total/section-cart-total.nunj' %}
+								</div>
+						</aside>
+				</div>
 		</div>
 {% endblock %}

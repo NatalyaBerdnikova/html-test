@@ -1,6 +1,6 @@
 {% from "../../components/icon/icon.nunj" import icon %}
 
-<div class="header">
+<header class="header">
 		<div class="container">
 				<a class="header__logo" href="/">
 						{{ icon({
@@ -29,4 +29,4 @@
 						<span class="header__mobile-menu-button-line"></span>
 				</button>
 		</div>
-</div>
+</header>

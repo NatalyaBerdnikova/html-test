@@ -63,6 +63,7 @@ table {
 input,
 select,
 textarea {
+	font-family: inherit;
 	@include box;
 }
 
