@@ -2,9 +2,9 @@
 {% from "../../components/controls/input/input.nunj" import input %}
 
 <section class="section-promocode">
-  <h5 class="section-promocode__title title">
+  <h2 class="section-promocode__title title">
     Promo code
-  </h5>
+  </h2>
   <div class="section-promocode__input-wrapper" data-promocode-container="data-promocode-container">
     <div class="section-promocode__input">
       {{ input({

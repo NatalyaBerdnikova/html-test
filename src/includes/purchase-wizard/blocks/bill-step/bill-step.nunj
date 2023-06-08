@@ -4,46 +4,46 @@
 {% from '../../../../components/controls/radio-button/radio-button.nunj' import radioButton %}
 
 <section class="bill-step step" data-purchase-wizard-step="bill">
-  <h5 class="bill-step__title step__title title">
-    Billing Information
-  </h5>
-  <form>
-    <div class="bill-step__payment-methods">
-      {{ radioButton({
+		<h2 class="bill-step__title step__title title">
+				Billing Information
+		</h2>
+		<form>
+				<div class="bill-step__payment-methods">
+						{{ radioButton({
         name: 'pay_by',
-        checked: true,
         value: 'card',
+        inputAttributes: 'checked',
         text: 'Pay with Credit Card'
       }) }}
-      {{ radioButton({
+						{{ radioButton({
         name: 'pay_by',
         value: 'paypal',
         icon: 'paypal',
         iconAttrs: "width='85px' height='23px'"
       }) }}
-    </div>
-    <div class="bill-step__card">
-      {% include "../../../card-form/card-form.nunj" %}
-    </div>
-    <div class="bill-step__agreements">
-      <div class="bill-step__agreement">
-        {{ checkbox({
+				</div>
+				<div class="bill-step__card">
+						{% include "../../../card-form/card-form.nunj" %}
+				</div>
+				<div class="bill-step__agreements">
+						<div class="bill-step__agreement">
+								{{ checkbox({
           id: 'save_card',
-          checked: true,
+          inputAttributes: 'checked',
           text: 'Save information of this credit card'
         }) }}
-      </div>
-      <div class="bill-step__agreement">
-        {{ checkbox({
+						</div>
+						<div class="bill-step__agreement">
+								{{ checkbox({
           id: 'agree_terms',
           text: 'I accept the&nbsp;<a href="#" class="bill-step__doc-link">terms&nbsp;and&nbsp;conditions</a>
             and the&nbsp;<a href="#" class="bill-step__doc-link">Privacy Policies</a>'
         }) }}
-      </div>
-    </div>
-  </form>
-  <div class="step__buttons">
-    {{ button({ className: "_transparent", attributes: 'data-step-back-button', children: 'Back' }) }}
-    {{ button({ attributes: 'data-step-forward-button', children: 'Check Out' }) }}
-  </div>
+						</div>
+				</div>
+		</form>
+		<div class="step__buttons">
+				{{ button({ className: "_transparent", attributes: 'data-step-back-button', children: 'Back' }) }}
+				{{ button({ attributes: 'data-step-forward-button', children: 'Check Out' }) }}
+		</div>
 </section>

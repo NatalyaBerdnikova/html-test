@@ -26,9 +26,9 @@
   }
 ] %}
 
-<section class="section-cart-total" data-cart-total="data-cart-total">
+<div class="section-cart-total" data-cart-total="data-cart-total">
   {% for field in fields %}
     <span class="section-cart-total__name{% if field.textClass %} {{ field.textClass }}{% endif %} ">{{ field.name }}</span>
     <span class="section-cart-total__value" {{ field.attributes }}>{{ field.currency }}{{ field.value }}</span>
   {% endfor %}
-</section>
+</div>

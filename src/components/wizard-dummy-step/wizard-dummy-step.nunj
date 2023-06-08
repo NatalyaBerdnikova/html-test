@@ -2,9 +2,9 @@
 
 {% macro dummyStep(props) %}
   <section class="step _hidden">
-    <h5 class="step__title title">
+    <h2 class="step__title title">
       {{ props.title }}
-    </h5>
+    </h2>
     <div class="step__buttons">
       {% if not props.blockBack %}
         {{ button({ className: "_transparent", attributes: 'data-step-back-button', children: 'Back' }) }}

@@ -1,9 +1,9 @@
 {% macro productCard(props) %}
   <div class="product-card" data-cart-product-id="{{ props.id }}" data-price="{{ props.price }}">
-    <img class="product-card__image" src="{{ props.image.src }}" alt="{{ props.image.alt }}">
+    <img class="product-card__image" src="{{ props.image.src }}" srcset="{{ props.image.src }} 1x, {{ props.image.src2x }} 2x" alt="{{ props.image.alt }}">
     <div class="product-card__right-content">
       <div class="product-card__header">
-        <h6 class="product-card__title">{{ props.title }}</h6>
+        <h3 class="product-card__title">{{ props.title }}</h3>
         <button class="product-card__delete-button" aria-label="Delete product from cart" data-delete-button="data-delete-button"></button>
       </div>
       <div class="product-card__footer">

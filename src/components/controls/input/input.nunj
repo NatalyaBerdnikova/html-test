@@ -6,9 +6,9 @@
       <span class="input__label custom-label">
         {{ props.label }}
         {% if props.tip %}
-          <div class="input__tooltip">
+          <span class="input__tooltip">
             {{ tooltip({ text: props.tip }) }}
-          </div>
+          </span>
         {% endif %}
       </span>
     {% endif %}

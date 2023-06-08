@@ -18,7 +18,7 @@
   }
 ] %}
 
-<section class="purchase-wizard">
+<article class="purchase-wizard">
   <div class="purchase-wizard__steps">
     {{ steps({ steps: step_items }) }}
   </div>
@@ -28,4 +28,4 @@
     {% include './blocks/bill-step/bill-step.nunj' %}
     {{ dummyStep({ title: 'Review', blockForward: true }) }}
   </div>
-</section>
+</article>

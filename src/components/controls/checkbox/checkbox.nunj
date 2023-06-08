@@ -1,9 +1,11 @@
 {% macro checkbox(props) %}
-  <input id="{{ props.id }}" class="custom-checkbox-input" type="checkbox" {% if props.checked %} checked="true" {% endif %}>
-  <label for="{{ props.id }}" class="custom-checkbox-label">
-    <div class="custom-checkbox"></div>
-    <span>
-      {{ props.text }}
-    </span>
-  </label>
+		<div class="custom-checkbox">
+				<input id="{{ props.id }}" class="custom-checkbox__input" type="checkbox" {% if props.inputAttributes %} {{ props.inputAttributes }} {% endif %}>
+				<label for="{{ props.id }}" class="custom-checkbox__label">
+						<span class="custom-checkbox__appearance"></span>
+						<span>
+								{{ props.text }}
+						</span>
+				</label>
+		</div>
 {% endmacro %}

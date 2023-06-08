@@ -3,6 +3,7 @@
 {% set items = [
   {
     image: {
+      src2x: '/assets/images/card-image-1@2x.png',
       src: '/assets/images/card-image-1.png',
       alt: ''
     },
@@ -12,6 +13,7 @@
   },
   {
     image: {
+      src2x: '/assets/images/card-image-2@2x.png',
       src: '/assets/images/card-image-2.png',
       alt: ''
     },
@@ -22,7 +24,7 @@
 %}
 
 <section class="section-cart">
-  <h4 class="section-cart__title title">My basket</h4>
+  <h2 class="section-cart__title title">My basket</h2>
   <div class="section-cart__items">
     {% for item in items %}
       {{ productCard({
